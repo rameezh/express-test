@@ -2,7 +2,7 @@
   "name": "@getir/rameez",
   "version": "1.59.0",
   "scripts": {
-    "getir-prod": "node app.js --env=production | pino-pretty",
+    "start": "node app.js --env=production | pino-pretty",
     "getir-local": "node app.js --env=local | pino-pretty",
     "test": "./node_modules/mocha/bin/mocha test/unit/*/* --timeout 50000 --env local"
   },
