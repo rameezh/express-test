@@ -12,7 +12,7 @@ const requireWalk = require('./www/utils/requireWalk').requireWalk;
 
 // constants
 const env = config.get('environment');
-const _server_port = config.get('server').api.port || 5000;
+const _server_port =  process.env.PORT;
 // expressjs setup
 const app = express();
 
