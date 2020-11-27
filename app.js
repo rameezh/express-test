@@ -13,7 +13,6 @@ const requireWalk = require('./www/utils/requireWalk').requireWalk;
 // constants
 const env = config.get('environment');
 const _server_port = config.get('server').api.port || 5000;
-const server_host = config.get('server').api.host || '0.0.0.0';
 // expressjs setup
 const app = express();
 
@@ -42,6 +41,6 @@ async.series([
 ]);
 
 
-server.listen(_server_port, server_host, () => {
+server.listen(_server_port, () => {
     console.log(' [\u2713] Process ' + process.pid + ' is listening on port ' + _server_port);
 });
