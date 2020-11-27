@@ -10,7 +10,7 @@ https://getir-rameez-test.herokuapp.com/api/v1/get/records
 
 
 ### Postman Collection link
-
+https://www.getpostman.com/collections/55f8a1f61e813e3bd556
 
 POST /api/v1/get/records
 Host: https://getir-rameez-test.herokuapp.com
