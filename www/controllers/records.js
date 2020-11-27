@@ -11,6 +11,16 @@ const record_model = mongoose.model('records');
 
 class Records {
 
+    /**
+ * Get records
+ * @description Get records based on data provided
+ * @static
+ * @param {Date} startDate - start date
+ * @param {Date} endData - end dadte
+ * @param {number} minCount - minimum count
+ * @param {number} maxCount - maximum count
+ * @return {Object} return object with success/error
+ */
     static async getRecords(req, res) {
 
         try {
@@ -22,7 +32,7 @@ class Records {
             if (!_.isNull(error)) {
                 return res.send({
                     code: 1,
-                    message: error.details[0].message,
+                    msg: "Unsuccessful",
                     success: false
                 });
             }
@@ -31,7 +41,7 @@ class Records {
 
             if (_.isNil(records) || _.isEmpty(records)) throw boom.notFound('No records found');
 
-            res.send({ code: 0, success: true, data: records });
+            res.send({ code: 0, msg: "Success", records });
 
         } catch (error) {
             const error_response = helper.decorateErrorResponseV2(error);

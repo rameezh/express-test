@@ -1,0 +1,27 @@
+{
+    "environment": "production",
+    "app": {
+        "version": 1.0,
+        "domain": "localhost",
+        "cookie_domain": "localhost"
+    },
+    "server": {
+        "api": {
+            "name": "Getir - API server",
+            "host": "localhost",
+            "port": 4000,
+            "ssl": false
+        }
+    },
+    "database": {
+        "mongodb": {
+            "uri": "mongodb://challenge-shard-00-00-xzwqd.mongodb.net",
+            "port": 27017,
+            "dbname": "admin",
+            "options": {
+                "user": "challengeUser",
+                "pass": "WUMglwNBaydH8Yvu"
+            }
+        }
+    }
+}

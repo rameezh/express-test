@@ -19,15 +19,15 @@ class RecordService {
         const query = await record_model.aggregate([
             {
                 $project: {
-                    _id: true,
-                    key: true,
-                    createdAt: true,
-                    Sum_of_count: { $sum: "$counts" }
+                    _id: 0,
+                    key: 1,
+                    createdAt: 1,
+                    totalCount: { $sum: "$counts" }
                 },
             },
             {
                 $match: {
-                    Sum_of_count: { 
+                    totalCount: { 
                         $gte: parseInt(minCount),
                         $lte: parseInt(maxCount)
                     },
